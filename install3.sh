@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 #3. create mailpass.txt
 #4. create domains.txt
 

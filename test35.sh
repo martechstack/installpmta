@@ -1,5 +1,5 @@
 # 3. ADD rule on plex:
-SERVER_IP=$1;
+SERVER_IP='8.8.8.8';
 SSH2_FILE=/var/www/admin/data/www/plex.mailerapp.cc/vendor/phpseclib/phpseclib/phpseclib/Net/SSH2.php;
 if grep -q ${SERVER_IP} ${SSH2_FILE};
 then

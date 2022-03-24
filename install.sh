@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+die;
+
 
 # 2. Open port on new server:
 sed -i 's/#Port 22/Port 1122/g' /etc/ssh/sshd_config

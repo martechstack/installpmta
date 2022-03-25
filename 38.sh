@@ -1,3 +1,5 @@
-echo "Input pmta server ip: ";
-read SERVER_IP;
-echo SERVER_IP;
+echo "Как вас зовут? "
+
+read   n
+
+echo "Здравствуйте, $n"

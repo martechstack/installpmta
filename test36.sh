@@ -1,6 +1,4 @@
-echo "Input pmta server ip: ";
-read SERVER_IP;
-echo SERVER_IP;
+echo "Input pmta server ip: "; read SERVER_IP; echo 'your server ip: '; echo ${SERVER_IP}
 SSH2_FILE='/var/www/admin/data/www/plex.mailerapp.cc/vendor/phpseclib/phpseclib/phpseclib/Net/SSH2.php';
 if grep -q ${SERVER_IP} ${SSH2_FILE};
 then

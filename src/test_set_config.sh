@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-#cat <<'EOF' >>/etc/pmta/config
-cat <<'EOF' >>test_config.txt
+cat <<'EOF' >>/etc/pmta/config
 
 #####################################################################################################################################
 # Section 1: POTOKI

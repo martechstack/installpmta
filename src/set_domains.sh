@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cat <<'EOF' >>$HOME/test.php
 <?php
 //todo need to configure:

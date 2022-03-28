@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cat <<'EOF' >>$HOME/test.php
+cat <<'EOF' >>$HOME/set_domains.php
 <?php
 //todo need to configure:
 $domain = '';
@@ -7,7 +7,7 @@ $server_id = '';
 $server_ip = '';
 $api_key = '';
 
-$file = 'test.txt';
+$file = 'domains.txt';
 $data = [
     "action" => "get_instance_ips",
     "serviceid" => $server_id,

@@ -2,13 +2,12 @@
 die;
 
 
-# 2. Open port on new server:
-sed -i 's/#Port 22/Port 1122/g' /etc/ssh/sshd_config
-
-# 3. ADD rule on plex:
-
+#3. Open port on new server:
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/change_port.sh | bash
 
 #3. create mailpass.txt
+
+
 #4. create domains.txt
 
 sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-*

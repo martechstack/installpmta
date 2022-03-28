@@ -32,7 +32,6 @@ if (empty($result['success']['IP Addresses'])) {
 file_put_contents($file, $domain . ' ' . $server_ip . PHP_EOL);
 file_put_contents($file, 'a1.' .$domain . ' ' . $server_ip . PHP_EOL, FILE_APPEND | LOCK_EX);
 $ips = $result['success']['IP Addresses'];
-echo '<pre>'; print_r([    $ips    ]); echo die;
 
 $key = 2;
 foreach ($ips as $ip) {

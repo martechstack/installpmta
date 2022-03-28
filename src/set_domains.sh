@@ -1,3 +1,4 @@
+cat <<'EOF' >>$HOME/test.php
 <?php
 //todo need to configure:
 $domain = '';
@@ -42,3 +43,4 @@ foreach ($ips as $ip) {
     file_put_contents($file, $str, FILE_APPEND | LOCK_EX);
     $key++;
 }
+EOF

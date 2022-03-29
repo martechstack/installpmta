@@ -1,22 +1,13 @@
 #!/usr/bin/env bash
-die;
 
-
-#3. Open port on new server:
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/change_port.sh | bash
-
-#3. create mailpass.txt
-
-
-#4. create domains.txt
-
-
 sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-*
 sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-Linux-*
 yum check-update
 yum update
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/1-Start.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/2-LAMP.sh | bash
+php set_domains.php
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/3-BIND.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/4-Postfix.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/5-Exim.sh | bash

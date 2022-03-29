@@ -25,6 +25,7 @@ curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/7-
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/8-Zip.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/9-PMTA-Config.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/10-PMTA-Install.sh | bash
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_config.sh | bash
 
 echo ' ';
 echo '|\  ||  /|';

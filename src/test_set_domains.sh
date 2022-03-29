@@ -5,9 +5,11 @@ cat <<'EOF' >>$HOME/set_domains.php
 $domain = '';
 $server_id = '';
 $server_ip = '';
+$server_pass = 'passwordtiisis';
 $api_key = '';
 
 $file = 'domains.txt';
+$file_mailpass = 'mailpass.txt';
 $data = [
     "action" => "get_instance_ips",
     "serviceid" => $server_id,
@@ -29,6 +31,7 @@ $result = json_decode($result, true);
 if (empty($result['success']['IP Addresses'])) {
     die('Array of IPs is empty...');
 }
+file_put_contents($file_mailpass, $server_pass);
 file_put_contents($file, $domain . ' ' . $server_ip . PHP_EOL);
 file_put_contents($file, 'a1.' .$domain . ' ' . $server_ip . PHP_EOL, FILE_APPEND | LOCK_EX);
 $ips = $result['success']['IP Addresses'];
@@ -44,3 +47,7 @@ foreach ($ips as $ip) {
     $key++;
 }
 EOF
+
+echo '================================================================================================================';
+echo 'Domains.php and Pailpass.txt created!';
+echo '================================================================================================================';

@@ -5,7 +5,7 @@ cat <<'EOF' >>$HOME/set_domains.php
 $domain = '';
 $server_id = '';
 $server_ip = '';
-$server_pass = 'passwordtiisis';
+$server_pass = '';
 $api_key = '';
 
 $file = 'domains.txt';

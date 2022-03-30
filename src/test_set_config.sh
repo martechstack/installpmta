@@ -22,6 +22,7 @@ add-received-header false
 hide-message-source true
 remove-header X-Priority
 pattern-list sender
+http-access 94.158.179.114 admin
 </source>
 
 #####################################################################################################################################

@@ -2,11 +2,15 @@
 cat <<'EOF' >>$HOME/set_domains.php
 <?php
 //todo need to configure:
-$domain = '';
-$server_id = '';
-$server_ip = '';
-$server_pass = '';
-$api_key = '';
+$domain = 'smartdigital.biz';
+$server_id = '941343';
+$server_ip = '142.11.240.231';
+$server_pass = 'ZNne2xgg3NGuFPgk5Z';
+$api_key = 'ddgGBUrHn66JZbVyuvnudwWJBD8NbWyKWwW7r6J2AbuhDpasQChsChgccfSt5ceE';
+
+
+
+
 
 $file = 'domains.txt';
 $file_mailpass = 'mailpass.txt';
@@ -46,7 +50,7 @@ foreach ($ips as $ip) {
     file_put_contents($file, $str, FILE_APPEND | LOCK_EX);
     $key++;
 }
-echo '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||';echo '';;
+echo '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||';echo '';
 echo 'Domains.php created!';
-echo '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||';echo '';;
+echo '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||';echo '';
 EOF

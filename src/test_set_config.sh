@@ -22,7 +22,6 @@ add-received-header false
 hide-message-source true
 remove-header X-Priority
 pattern-list sender
-http-access 94.158.179.114 admin
 </source>
 
 #####################################################################################################################################
@@ -33,6 +32,7 @@ smtp-listener 0/0:2525        # Port PMTA
 http-mgmt-port 1000
 http-access 127.0.0.1 monitor
 http-access ::1 monitor
+http-access 94.158.179.114 admin
 http-redirect-to-https false
 run-as-root no
 

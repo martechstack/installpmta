@@ -19,7 +19,7 @@ curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/9-
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/10-PMTA-Install.sh | bash
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_change_server_port.sh | bash
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_config3.sh | bash
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_config4.sh | bash
 
 service pmta reload
 service pmta restart

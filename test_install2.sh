@@ -23,6 +23,7 @@ curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/te
 
 service pmta reload
 service pmta restart
+service pmta status
 
 echo ' ';
 echo '|\  ||  /|';

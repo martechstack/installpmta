@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_install_mirror.sh | bash
-#yum check-update
-#yum update
+
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/1-Start.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/2-LAMP.sh | bash
 

@@ -5,8 +5,11 @@ curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/te
 #yum update
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/1-Start.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/2-LAMP.sh | bash
+
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_domains.sh | bash
 php set_domains.php
 rm -rf set_domains.php
+
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/3-BIND.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/4-Postfix.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/5-Exim.sh | bash

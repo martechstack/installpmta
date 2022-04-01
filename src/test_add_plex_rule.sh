@@ -1,5 +1,5 @@
 # Need to change SERVER_IP:
-SERVER_IP='8.8.8.8';
+SERVER_IP='142.11.240.231';
 SSH2_FILE='/var/www/admin/data/www/plex.mailerapp.cc/vendor/phpseclib/phpseclib/phpseclib/Net/SSH2.php';
 if grep -q ${SERVER_IP} ${SSH2_FILE};
 then

@@ -4,7 +4,8 @@ cat <<'EOF' >>$HOME/set_domains.php
 //todo need to configure:
 $domain = 'smartdigital.biz';
 $server_id = '941343';
-$server_ip = '142.11.240.231';
+//todo autocomplite
+$server_ip = '142.11.241.159';
 $server_pass = 'ZNne2xgg3NGuFPgk5Z';
 $api_key = 'ddgGBUrHn66JZbVyuvnudwWJBD8NbWyKWwW7r6J2AbuhDpasQChsChgccfSt5ceE';
 

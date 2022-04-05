@@ -9,10 +9,7 @@ $server_ip = '142.11.241.159';
 $server_pass = 'ZNne2xgg3NGuFPgk5Z';
 $api_key = 'ddgGBUrHn66JZbVyuvnudwWJBD8NbWyKWwW7r6J2AbuhDpasQChsChgccfSt5ceE';
 
-
-
-
-
+//todo insert configs
 $file = 'domains.txt';
 $file_mailpass = 'mailpass.txt';
 $data = [

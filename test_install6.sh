@@ -21,12 +21,11 @@ curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/8-
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/9-PMTA-Config.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/10-PMTA-Install.sh | bash
 
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_change_server_port.sh | bash
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_config3.sh | bash
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_change_server_port_1122.sh | bash
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_pmta_config.sh | bash
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_virtualhost.sh | bash
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_date.sh | bash
-
-#curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/test_set_virtualhost.sh | bash
 
 service pmta reload
 service pmta restart

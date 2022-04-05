@@ -1,10 +1,27 @@
+#!/usr/bin/env bash
 
 cat <<'EOF' >$HOME/set_virtualhost.php
 <?php
 
 $path_to_file = "/etc/pmta/virtualhost.txt";
-$pattern = '/\<domain \*\>\n\s.*\<\/domain\>/i';
-$replacement = '<domain $tmobile>
+$pattern1 = '/\<domain \*\>\n\s.*\<\/domain\>/i';
+$pattern2 = '/\<domain \*\>\n\s.*\n\s.*\n\s.*\<\/domain\>/i';
+$replacement1 = '<domain *>
+    </domain>
+    <domain $tmobile>
+        max-msg-rate 1/s
+    </domain>
+    <domain $verizon>
+        max-msg-rate 1/s
+    </domain>
+    <domain $att>
+        max-msg-rate 1/s
+    </domain>';
+    $replacement2 = '<domain *>
+        dkim-sign yes
+        dkim-identity @smartdigital.biz
+    </domain>
+    <domain $tmobile>
         max-msg-rate 1/s
     </domain>
     <domain $verizon>
@@ -14,14 +31,15 @@ $replacement = '<domain $tmobile>
         max-msg-rate 1/s
     </domain>';
 $content = file_get_contents($path_to_file);
-
-$content = preg_replace($pattern, $replacement, $content);
-
+$content = preg_replace($pattern1, $replacement1, $content);
+$content = preg_replace($pattern2, $replacement2, $content);
 file_put_contents($path_to_file, $content);
 EOF
 
 php $HOME/set_virtualhost.php
+rm -rf $HOME/set_virtualhost.php
 
-
-
+echo '/etc/pmta/virtualhost.txt has set!';
+echo '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||';echo '';
+echo '';
 

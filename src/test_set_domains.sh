@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
-cat <<'EOF' >>$HOME/set_domains.php
+
+#yum install epel-release -y
+#yum install jq -y
+
+cat <<'EOF' >$HOME/set_domains.php
 <?php
-//todo need to configure:
-$domain = 'smartdigital.biz';
-$server_id = '941343';
-//todo autocomplite
-$server_ip = '142.11.241.159';
-$server_pass = 'ZNne2xgg3NGuFPgk5Z';
-$api_key = 'ddgGBUrHn66JZbVyuvnudwWJBD8NbWyKWwW7r6J2AbuhDpasQChsChgccfSt5ceE';
+
+$config = json_decode(file_get_contents('config.json'));
+
+$domain = $config->domain;
+$server_id = $config->server_id;
+$server_ip = $config->server_ip;
+$server_pass = $config->server_pass;
+$api_key = $config->api_key;
 
 //todo insert configs
 $file = 'domains.txt';

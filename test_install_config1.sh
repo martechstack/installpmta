@@ -5,7 +5,7 @@ cat <<'EOF' >$HOME/config.json
   "domain": "",
   "server_id": "",
   "server_ip": "",
-  "server_pass": ""
+  "server_pass": "",
   "api_key": ""
 }
 EOF

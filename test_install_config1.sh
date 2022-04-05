@@ -9,3 +9,5 @@ cat <<'EOF' >$HOME/config.json
   "api_key": ""
 }
 EOF
+
+nano $HOME/config.json;

@@ -2,6 +2,8 @@
 
 #yum install epel-release -y
 #yum install jq -y
+#config='config.json'
+#PMTA_DOMAIN=$(jq -r '.domain' "$config")
 
 cat <<'EOF' >$HOME/set_domains.php
 <?php

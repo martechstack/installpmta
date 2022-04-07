@@ -11,4 +11,3 @@ else
   sed -i 's/function __construct($host, $port = 22, $timeout = 10) {/function __construct($host, $port = 22, $timeout = 10) {\n        if ($host == "'${SERVER_IP}'") { $port = 1122; }\n/g' ${SSH2_FILE}
   echo 'SERVER_IP added to ssh2 file';
 fi
-

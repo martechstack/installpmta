@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+config='config.json'
+DOMAIN=$(jq -r '.server_ip' "$config")
+
 cat <<'EOF' >$HOME/set_virtualhost.php
 <?php
 
@@ -19,7 +22,7 @@ $replacement1 = '<domain *>
     </domain>';
     $replacement2 = '<domain *>
         dkim-sign yes
-        dkim-identity @smartdigital.biz
+        dkim-identity @${DOMAIN}
     </domain>
     <domain $tmobile>
         max-msg-rate 1/s

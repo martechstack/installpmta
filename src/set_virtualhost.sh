@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+yum install epel-release -y
+yum install jq -y
 config='config.json'
 DOMAIN=$(jq -r '.server_ip' "$config")
 

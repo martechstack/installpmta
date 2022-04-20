@@ -24,7 +24,7 @@ $replacement1 = '<domain *>
     </domain>';
     $replacement2 = '<domain *>
         dkim-sign yes
-        dkim-identity @${DOMAIN}
+        dkim-identity @DOMAIN
     </domain>
     <domain $tmobile>
         max-msg-rate 1/s

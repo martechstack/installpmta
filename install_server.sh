@@ -23,7 +23,7 @@ curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/10
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/change_server_port_1122.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/set_pmta_config.sh | bash
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/set_virtualhost.sh | bash
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/set_virtualhost2.sh | bash
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/set_date.sh | bash
 

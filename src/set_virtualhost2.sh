@@ -13,7 +13,7 @@ $domain = $config->domain;
 $path_to_file = "/etc/pmta/virtualhost.txt";
 $pattern1 = '/\<domain \*\>\n\s.*\<\/domain\>/i';
 $pattern2 = '/\<domain \*\>\n\s.*\n\s.*\n\s.*\<\/domain\>/i';
-$replacement1 = "<domain *>
+$replacement1 = '<domain *>
     </domain>
     <domain $tmobile>
         max-msg-rate 1/s
@@ -26,7 +26,7 @@ $replacement1 = "<domain *>
     </domain>';
     $replacement2 = '<domain *>
         dkim-sign yes
-        dkim-identity @$domain
+        dkim-identity @' . $domain . '
     </domain>
     <domain $tmobile>
         max-msg-rate 1/s
@@ -36,7 +36,7 @@ $replacement1 = "<domain *>
     </domain>
     <domain $att>
         max-msg-rate 1/s
-    </domain>";
+    </domain>';
 $content = file_get_contents($path_to_file);
 $content = preg_replace($pattern1, $replacement1, $content);
 $content = preg_replace($pattern2, $replacement2, $content);

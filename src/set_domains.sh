@@ -26,6 +26,7 @@ $data = [
 ];
 $data_string = json_encode($data);
 
+// API docs: https://developers.hostwinds.com/cloud/
 $ch = curl_init('http://clients.hostwinds.com/cloud/api.php');
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);

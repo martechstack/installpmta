@@ -11,6 +11,7 @@ yum -y install autoconf pkg-config
 yum -y install wget
 yum -y install which
 yum -y install unzip
+yum install -y nano
 echo "Репозитории обновлены. Подготовка завершена"
 systemctl stop firewalld && systemctl disable firewalld
 echo ""

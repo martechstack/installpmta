@@ -9,3 +9,9 @@ step 2:
 Copy content from:
 https://raw.githubusercontent.com/martechstack/installpmta/master/src/add_rule.sh
 and replace new server IP
+
+<ul>
+Regenerate config:
+<li>create: config.json</li>
+<li>run: curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/regenerate_config.sh | bash</li>
+</ul>

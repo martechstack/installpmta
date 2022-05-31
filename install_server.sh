@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 #mirror
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/install_mirror.sh | bash
+# do not need it in new servers
+#curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/install_mirror.sh | bash
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/1-Start.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/2-LAMP.sh | bash

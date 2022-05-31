@@ -13,5 +13,5 @@ and replace new server IP
 <ul>
 Regenerate config:
 <li>create: config.json</li>
-<li>run: curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/regenerate_config.sh | bash</li>
+<li>run: curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/regenerate_configs.sh | bash</li>
 </ul>

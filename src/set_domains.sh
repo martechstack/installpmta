@@ -15,10 +15,13 @@ $server_id = $config->server_id;
 $server_ip = $config->server_ip;
 $server_pass = $config->server_pass;
 $api_key = $config->api_key;
+$ips = $config->ips;
 
 //todo insert configs
 $file = 'domains.txt';
 $file_mailpass = 'mailpass.txt';
+
+/*
 $data = [
     "action" => "get_instance_ips",
     "serviceid" => $server_id,
@@ -41,10 +44,11 @@ $result = json_decode($result, true);
 if (empty($result['success']['IP Addresses'])) {
     die('Array of IPs is empty...');
 }
+$ips = $result['success']['IP Addresses'];
+*/
 file_put_contents($file_mailpass, $server_pass);
 file_put_contents($file, $domain . ' ' . $server_ip . PHP_EOL);
 file_put_contents($file, 'a1.' .$domain . ' ' . $server_ip . PHP_EOL, FILE_APPEND | LOCK_EX);
-$ips = $result['success']['IP Addresses'];
 
 $key = 2;
 foreach ($ips as $ip) {

@@ -3,11 +3,6 @@
 rm -rf /etc/pmta
 rm -rf /etc/pmta/virtualhost.txt
 
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/set_domains.sh | bash
-#configurate nano set_domains.php
-php set_domains.php
-rm -rf set_domains.php
-
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/9-PMTA-Config.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/10-PMTA-Install.sh | bash
 

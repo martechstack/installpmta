@@ -44,16 +44,28 @@ run-as-root no
 # Section 3: BASE SETTINGS FOR LOCALHOST
 #####################################################################################################################################
 
-<source 0/0>
-    log-connections no
-    log-commands    no          # WARNING: verbose!
-    log-data        no          # WARNING: even more verbose!
-    allow-unencrypted-plain-auth yes
-    default-virtual-mta by-smtp-source-ip
-    process-x-virtual-mta yes
-    smtp-service yes
-    always-allow-api-submission yes
-    pattern-list pmta-pattern
+<source 37.120.215.117>
+    always-allow-relaying yes   # allow feeding from 127.0.0.1
+    process-x-virtual-mta yes   # allow selection of a virtual MTA
+    max-message-size 0
+    smtp-service yes            # allow SMTP service
+    remove-received-headers true
+    add-received-header false
+    hide-message-source true
+    remove-header X-Priority
+    pattern-list sender
+</source>
+
+<source 94.158.179.111>
+    always-allow-relaying yes   # allow feeding from 127.0.0.1
+    process-x-virtual-mta yes   # allow selection of a virtual MTA
+    max-message-size 0
+    smtp-service yes            # allow SMTP service
+    remove-received-headers true
+    add-received-header false
+    hide-message-source true
+    remove-header X-Priority
+    pattern-list sender
 </source>
 
 include /etc/pmta/virtualhost.txt
@@ -164,12 +176,13 @@ domain-macro verizon vtext.com
 <domain $verizon>
   use-starttls no
   max-smtp-out 1                                                  # default be nice on concurrent connections
-  max-msg-per-connection 1                                       # max 500 mails in one session
+  max-msg-per-connection 100                                      # max 500 mails in one session
   max-rcpt-per-message 1
   max-errors-per-connection 10                                    # avoid 'too long without data command' error
   reuse-ssl-session no
+  backoff-max-smtp-out 10
 
-  #max-msg-rate unlimited
+  max-msg-rate 1/5s
 
   bounce-upon-no-mx yes                                           # proper mail domains should have mx
   assume-delivery-upon-data-termination-timeout yes               # avoid duplicate deliveries
@@ -183,7 +196,7 @@ domain-macro verizon vtext.com
   bounce-after 3d                                                 # default 4d12h
 
   smtp-pattern-list blocking-errors
-  backoff-max-msg-rate 1/h                                        # send only regular tries during backoff (default unlimited)
+  backoff-max-msg-rate 1000/h                                        # send only regular tries during backoff (default unlimited)
   backoff-retry-after 10m,3h,6h,12h                                # retry at least every 20m (default 1h)
   backoff-to-normal-after-delivery yes                            # revert to normal asap (default no)
   backoff-to-normal-after 1h                                      # always revert to normal after 1h (default never)

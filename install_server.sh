@@ -4,15 +4,15 @@
 # do not need it in new servers
 #curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/install_mirror.sh | bash
 
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/1-Start.sh | bash
-#curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/make_config.sh | bash
-
-curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/2-LAMP.sh | bash
 #domains.txt and mailpass
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/set_domains.sh | bash
 #configurate nano set_domains.php
 php set_domains.php
 rm -rf set_domains.php
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/1-Start.sh | bash
+#curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/make_config.sh | bash
+
+curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/2-LAMP.sh | bash
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/3-BIND.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/4-Postfix.sh | bash

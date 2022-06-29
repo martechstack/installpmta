@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 rm -rf /etc/pmta
-rm -rf /etc/pmta/virtualhost.txt
 
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/9-PMTA-Config.sh | bash
 curl -s https://raw.githubusercontent.com/martechstack/installpmta/master/src/10-PMTA-Install.sh | bash
